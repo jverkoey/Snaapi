@@ -1,0 +1,74 @@
+
+a {
+  text-decoration: none;
+}
+
+.snaapi {
+  color: #447799;
+}
+
+#page-header {
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 5em;
+}
+
+.fixedwidth {
+  width: 912px;
+  margin: 0 auto;
+}
+
+.blocks {
+  border: 1px solid #EEE;
+  padding: 5px;
+  -webkit-box-shadow: 3px 3px 5px #CCC;
+  -moz-box-shadow: 3px 3px 5px #CCC;
+}
+
+.block {
+  background: #EEE;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EAEAEA), to(#EAEAEA));
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #E2E2E2;
+  border-right: 1px solid #E7E7E7;
+  border-left: 1px solid #FFFFFF;
+  float: left;
+  padding: 10px;
+  width: 278px;
+  height: 67px;
+  cursor: pointer;
+}
+
+.block:hover {
+  background: #DDD;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), color-stop(0.5, #F0F0F0), color-stop(0.5, #E5E5E5), to(#E5E5E5));
+  cursor: pointer;
+}
+
+.block .details {
+  margin-left: 67px;
+  margin-top: 14px;
+}
+
+.block .title {
+  font-size: 1.3em;
+  text-shadow: -1px -1px 1px #FFF;
+  color: #000;
+}
+
+.block .description {
+  color: #666;
+  text-shadow: -1px -1px 1px #FFF;
+}
+
+.block .icon {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.block .rounded img {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
