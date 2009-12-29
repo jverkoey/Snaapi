@@ -1,0 +1,304 @@
+
+#page-wrapper {
+  height: auto !important;
+  min-height: 100%;
+  margin: 0 0 -75px;
+
+  overflow: hidden;
+}
+
+#page-footer {
+  height: 75px;
+}
+
+#footer {
+  clear: both;
+  height: 49px;
+  position: relative;
+  border-top: 1px dotted #FF9933;
+  margin-top: 25px;
+}
+
+#footer .copyright {
+  margin-top: 5px;
+  text-align: center;
+}
+
+#footer .attribution {
+  margin-top: 6px;
+  text-align: center;
+}
+
+#pageheader {
+  height:100px;
+
+  background-image: url('/gfx/headergradient.png');
+/*  background: -webkit-gradient(linear, 0% 0%, 0% 100%,
+    from(#FF6600),
+    color-stop(0.3, #FF9933),
+    color-stop(0.3, #FF9933),
+    to(#FFCC99)) content-box padding-box;*/
+}
+
+#pageheader .title {
+  float: left;
+  padding-top: 20px;
+  font-size: 4em;
+  text-shadow: 1px 1px 3px #993300;
+}
+
+#pageheader .title a,
+#pageheader .title a:hover {
+  color: #FFF;
+  background-color: transparent;
+}
+
+#pageheader .title .subtitle {
+  font-size: 0.5em;
+}
+
+#pageheader ul {
+  margin-top: 30px;
+  float: right;
+}
+
+#pageheader li {
+  float: left;
+  padding: 20px 10px;
+  font-size: 1.5em;
+}
+
+#pageheader li a {
+  color: #FFF;
+  background-color: transparent;
+  text-shadow: 1px 1px 1px #993300;
+}
+
+#globallookup {
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  border: 1px solid #999;
+  background-color: #FED;
+  padding: 3px;
+  font-size: 0.7em;
+  width: 180px;
+}
+
+#globallookup:focus {
+  border: 1px solid #333;
+}
+
+.placeholder {
+  color: #AAA;
+}
+
+#pageheadershadow {
+  background-image: url(/gfx/shadow.png);
+  height: 10px;
+}
+
+.fixedwidth {
+  width: 880px;
+  margin: 0 auto;
+}
+
+.clearfix {
+  clear: both;
+}
+
+#page-wrapper a,
+#footer a {
+  text-decoration: none;
+  color: #333;
+  padding: 3px;
+  background-color: #FED;
+}
+
+#page-wrapper a.anchor {
+  padding: 0;
+}
+
+#page-wrapper a:hover,
+#footer a:hover {
+  background-color: #FC9;
+}
+
+#toc {
+  margin-top: 23px;
+  width: 170px;
+  float: left;
+}
+
+#toc .header {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+}
+
+#toc ul {
+  padding-top: 5px;
+  padding-bottom: 10px;
+}
+
+#toc li {
+  background-color: #FED;
+  margin-bottom: 5px;
+}
+
+#toc li:hover {
+  background-color: #fc9;
+  cursor: pointer;
+}
+
+#toc a {
+  display: block;
+  text-decoration: none;
+  color: #333;
+  padding: 5px;
+}
+
+#content {
+  float: right;
+  width: 680px;
+  padding: 10px;
+}
+
+#content h1 {
+  font-size: 2em;
+  border-bottom: 5px solid #FFEEDD;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+#content h2 {
+  font-size: 1.7em;
+  border-bottom: 3px solid #FED;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#content h3 {
+  font-size: 1.5em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+#content .source {
+  margin-top: 5px;
+  text-align: right;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+#content p {
+  font-size: 1.3em;
+  margin-bottom: 20px;
+  line-height: 1.7em;
+}
+
+#content ul {
+  margin-bottom: 20px;
+}
+
+#content ol li,
+#content ul li {
+  font-size: 1.3em;
+  margin-left: 25px;
+  margin-bottom: 10px;
+  line-height: 1.5em;
+}
+
+#content ol li {
+  list-style-type: decimal;
+}
+
+#content ul li {
+  list-style-type: square;
+}
+
+#content .toc {
+  margin-top: 10px;
+}
+
+#content .toc li {
+  margin-left: 10px;
+  margin-bottom: 20px;
+  float: left;
+  list-style-type: none;
+}
+
+#content .image {
+  text-align: center;
+}
+
+#content .image img {
+  padding: 5px;
+  -webkit-box-shadow: #999 0px 5px 5px;
+  -moz-box-shadow: #999 0px 5px 5px;
+  background-color: #FED;
+}
+
+#content .darker img {
+  background-color: #D8DDE7;
+}
+
+.inline,
+code {
+  /* Font-family set borrowed from StackOverflow; their font selection is delicious! */
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  padding: 3px;
+  background-color: #EEE;
+  color: #333;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+.code {
+  margin-bottom: 20px;
+}
+
+#content pre {
+  /* Font-family set borrowed from StackOverflow; their font selection is delicious! */
+  font-family: Consolas,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New;
+  background-color: #333;
+  padding: 5px;
+  color: #fff;
+  line-height: 1.5em;
+  margin-bottom: 20px;
+}
+
+#content blockquote {
+  margin-left: 10px;
+}
+
+#content blockquote p {
+  font-style: italic;
+}
+
+#content .sectiontags li {
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #666;
+  list-style-type: none;
+  float: left;
+  padding: 5px;
+  margin-left: 0;
+  margin-right: 5px;
+  margin-bottom: 0;
+  background-color: #eee;
+}
+
+#apilookup {
+  border: 1px solid #999;
+  padding: 3px;
+}
+
+.lastmodified {
+  text-align: right;
+  font-size: 0.8em;
+  padding: 10px;
+}
+
+strong {
+  font-weight: bold;
+}
