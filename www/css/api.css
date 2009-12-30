@@ -7,8 +7,7 @@
 .content .header {
   background: #EEE;
   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EAEAEA), to(#EAEAEA));
-  border: 1px solid #CCC;
-  border-bottom: 10px dashed #CCC;
+  border-bottom: 10px dashed #333;
   padding: 10px;
 }
 
@@ -36,4 +35,50 @@
 .content .header .description {
   color: #666;
   text-shadow: -1px -1px 1px #FFF;
+}
+
+.content .blocks {
+  background-color: #EAEAEA;
+}
+
+.content .blocks .block {
+  padding: 10px;
+  float: left;
+  width: 430px;
+}
+
+.content .blocks .block h1 {
+  font-size: 2em;
+  color: #666;
+  text-shadow: -1px -1px 0px #FFF;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.content .blocks .block .row {
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EAEAEA), to(#EAEAEA));
+  cursor: pointer;
+}
+
+.content .blocks .block .row:hover {
+  background: #DDD;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), color-stop(0.5, #F0F0F0), color-stop(0.5, #E6E6E6), to(#E6E6E6));
+  cursor: pointer;
+}
+
+.content .blocks .block .row .details {
+  padding: 10px;
+}
+
+.content .blocks .block .row .details .title {
+  font-size: 1.3em;
+  text-shadow: -1px -1px 1px #FFF;
+  color: #000;
+}
+
+.content .blocks .block .row .details .description {
+  color: #666;
+  text-shadow: -1px -1px 1px #FFF;
+  white-space: nowrap;
+  overflow: hidden;
 }

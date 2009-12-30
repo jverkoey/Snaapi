@@ -6,20 +6,25 @@ class SnaapiController extends Keystone_Controller {
     'facebook' => array(
       'name' => 'Facebook',
       'description' => 'The Facebook API.',
-      'roundedicon' => false
+      'roundedicon' => false,
+      'twitterkeywords' => 'facebook api'
     ),
     'three20' => array(
       'name' => 'Three20',
       'description' => 'Three20 is an Objective-C library for the iPhone.',
       'roundedicon' => true,
-      'newsfeeds' => array(
-        'feed://pipes.yahoo.com/pipes/pipe.run?_id=e14dbf6904dfaa72091fa7b1ff09f98a&_render=rss'
-      )
+      'feeds' => array(
+        'All' => 'feed://pipes.yahoo.com/pipes/pipe.run?_id=e14dbf6904dfaa72091fa7b1ff09f98a&_render=rss',
+        'Three20.info News' => 'http://three20.info/news/feed/atom/',
+        'Three20 Google Group' => 'feed://groups.google.com/group/three20/feed/rss_v2_0_msgs.xml'
+      ),
+      'twitterkeywords' => 'three20'
     ),
     'twitter' => array(
       'name' => 'Twitter',
       'description' => 'The Twitter HTTP-based API.',
-      'roundedicon' => false
+      'roundedicon' => false,
+      'twitterkeywords' => 'twitter api'
     )
   );
 

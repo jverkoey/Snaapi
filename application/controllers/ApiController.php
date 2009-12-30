@@ -21,7 +21,16 @@ class ApiController extends SnaapiController {
         $this->afterAction();
         $this->beforeRender();
 
-        $this->view->api = $this->apis[$apiId];
+        $api = $this->apis[$apiId];
+        if (isset($api['twitterkeywords'])) {
+          if (!isset($api['feeds'])) {
+            $api['feeds'] = array();
+          }
+          $api['feeds']['Twitter search for "'.$api['twitterkeywords'].'"'] =
+            'http://search.twitter.com/search.atom?q='.$api['twitterkeywords'];
+        }
+
+        $this->view->api = $api;
         $this->view->apiId = $apiId;
 
         $this->view->render();
@@ -45,6 +54,7 @@ class ApiController extends SnaapiController {
 
     $this->view->addCssFile('/css/common.css');
     $this->view->addCssFile('/css/api.css');
+    $this->view->addJsFootFile('http://www.google.com/jsapi?key='.GFEEDS_API);
     $this->view->apis = $this->apis;
   }
 }

@@ -16,6 +16,26 @@
   <div class="clearfix"></div>
 </div>
 
+<div class="blocks">
+<? if (isset($this->api['feeds'])) { ?>
+  <div class="block">
+    <h1>Feeds</h1>
+<? foreach ($this->api['feeds'] as $name => $url) { ?>
+  <a href="<?= $url ?>">
+    <div class="row">
+      <div class="details">
+        <div class="title"><?= $name ?></div>
+        <div class="description"><?= $url ?></div>
+      </div>
+    </div>
+  </a>
+<? } ?>
+  </div>
+<? } ?>
+
+  <div class="clearfix"></div>
+</div>
+
 </div> <!-- content -->
 
 </div> <!-- fixedwidth -->
