@@ -5,7 +5,7 @@
 </div>
 
 <a href="/"><div class="tab leftsidetab">&lt; Back</div></a>
-<div class="tab rightsidetab">Dreaming of a more connected world.</div>
+<div class="tab rightsidetab">Working towards a more connected world.</div>
 <div class="clearfix"></div>
 
 <div class="content">
