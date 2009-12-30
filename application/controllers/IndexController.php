@@ -11,6 +11,7 @@ class IndexController extends SnaapiController {
     ));
 
     $this->view->addCssFile('/css/common.css');
+    $this->view->addCssFile('/css/home.css');
     $this->view->apis = $this->apis;
   }
 

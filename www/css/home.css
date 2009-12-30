@@ -1,0 +1,61 @@
+
+.blocks {
+  padding: 5px;
+  background-color: #EEE;
+  -webkit-box-shadow: 3px 3px 5px #222;
+  -moz-box-shadow: 3px 3px 5px #222;
+}
+
+.block {
+  background: #EEE;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #E5E5E5), to(#E5E5E5));
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #E2E2E2;
+  border-right: 1px solid #E7E7E7;
+  border-left: 1px solid #FFFFFF;
+  padding: 10px;
+  width: 274px;
+  height: 67px;
+  cursor: pointer;
+}
+
+.inlineblock {
+  float: left;
+}
+
+.centeredblock {
+  margin: 0 auto;
+}
+
+.block:hover {
+  background: #DDD;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EAEAEA), color-stop(0.5, #EAEAEA), color-stop(0.5, #D9D9D9), to(#D9D9D9));
+  cursor: pointer;
+}
+
+.block .details {
+  margin-left: 67px;
+  margin-top: 14px;
+}
+
+.block .title {
+  font-size: 1.3em;
+  text-shadow: -1px -1px 1px #FFF;
+  color: #000;
+}
+
+.block .description {
+  color: #666;
+  text-shadow: -1px -1px 1px #FFF;
+}
+
+.block .icon {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
+.block .rounded img {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}

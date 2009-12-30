@@ -1,14 +1,14 @@
-<div id="page-header">
-  sna<span class="snaapi">api</span>
-</div>
-
 <div class="fixedwidth">
+
+<div id="page-header">
+  <span class="snaapi">sna<span class="rightside">api</span></span>
+</div>
 
 <div class="blocks">
 
 <? foreach ($this->apis as $id => $api) { ?>
 <a href="/api/<?= $id ?>">
-<div class="block" id="<?= $id ?>">
+<div class="block inlineblock" id="<?= $id ?>">
   <div class="icon<?= $api['roundedicon'] ? ' rounded' : ''; ?>">
     <img src="/gfx/<?= $id ?>.png" width="57px" height="57px" />
   </div>

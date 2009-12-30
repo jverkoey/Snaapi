@@ -11,7 +11,10 @@ class SnaapiController extends Keystone_Controller {
     'three20' => array(
       'name' => 'Three20',
       'description' => 'Three20 is an Objective-C library for the iPhone.',
-      'roundedicon' => true
+      'roundedicon' => true,
+      'newsfeeds' => array(
+        'feed://pipes.yahoo.com/pipes/pipe.run?_id=e14dbf6904dfaa72091fa7b1ff09f98a&_render=rss'
+      )
     ),
     'twitter' => array(
       'name' => 'Twitter',
