@@ -16,11 +16,6 @@ class ApiController extends SnaapiController {
       $actionName = $apicontext->getActionName();
       if( $apicontext->isCallableAction($actionName) &&
           method_exists($this, $actionName) ) {
-        $this->beforeAction();
-        call_user_func_array(array(&$this, $actionName), $actionParams);
-        $this->afterAction();
-        $this->beforeRender();
-
         $api = $this->apis[$apiId];
         if (isset($api['twitterkeywords'])) {
           if (!isset($api['feeds'])) {
@@ -29,7 +24,7 @@ class ApiController extends SnaapiController {
           $api['feeds']['Twitter search for "'.$api['twitterkeywords'].'"'] =
             'http://search.twitter.com/search.atom?q='.$api['twitterkeywords'];
         }
-        
+
         if (isset($api['stackoverflowkeywords'])) {
           if (!isset($api['feeds'])) {
             $api['feeds'] = array();
@@ -42,6 +37,10 @@ class ApiController extends SnaapiController {
         $this->view->api = $api;
         $this->view->apiId = $apiId;
 
+        $this->beforeAction();
+        call_user_func_array(array(&$this, $actionName), $actionParams);
+        $this->afterAction();
+        $this->beforeRender();
         $this->view->render();
         $this->afterRender();
         $did_render = true;
@@ -58,7 +57,7 @@ class ApiController extends SnaapiController {
 
     $this->view->addMeta(array(
       'name'    => 'description',
-      'content' => 'API lookup.'
+      'content' => $this->view->api['description']
     ));
 
     $this->view->addCssFile('/css/common.css');
