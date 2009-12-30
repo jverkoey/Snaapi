@@ -37,6 +37,27 @@
   </div>
 <? } ?>
 
+<? if (isset($this->api['maintainers'])) { ?>
+  <div class="block" id="twitter">
+    <h1>People to follow</h1>
+<? foreach ($this->api['maintainers'] as $username) { ?>
+  <a href="<?= $url ?>">
+    <div class="row">
+      <div class="icon">
+        <img src="<?= $this->users[$username]['profile_image_url'] ?>" width="48px" height="48px" />
+      </div>
+      <div class="details">
+        <div class="title"><?= $username ?></div>
+        <div class="description"><?= $this->users[$username]['status']['text'] ?></div>
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </a>
+<? } ?>
+  </div>
+<? } ?>
+
+
   <div class="clearfix"></div>
 </div>
 

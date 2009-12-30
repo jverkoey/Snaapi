@@ -10,7 +10,10 @@ class SnaapiController extends Keystone_Controller {
       'feeds' => array(
         'Remix News' => 'feed://remixblog.info/feed/'
       ),
-      'twitterkeywords' => 'best buy api'
+      'twitterkeywords' => 'best buy api',
+      'maintainers' => array(
+        'bestbuyremix'
+      )
     ),
     'facebook' => array(
       'name' => 'Facebook',
@@ -31,17 +34,25 @@ class SnaapiController extends Keystone_Controller {
         'Three20 Google Group' => 'feed://groups.google.com/group/three20/feed/rss_v2_0_msgs.xml'
       ),
       'stackoverflowkeywords' => 'three20',
-      'twitterkeywords' => 'three20'
+      'twitterkeywords' => 'three20',
+      'maintainers' => array(
+        'joehewitt',
+        'featherless'
+      )
     ),
     'twitter' => array(
       'name' => 'Twitter',
       'description' => 'The Twitter HTTP-based API.',
       'roundedicon' => false,
       'feeds' => array(
-        'Twitter News' => 'feed://feeds.feedburner.com/TwitterBlog'
+        'Twitter News' => 'feed://feeds.feedburner.com/TwitterBlog',
+        'Twitter Status' => 'http://status.twitter.com/'
       ),
       'stackoverflowkeywords' => 'twitter twitterapi',
-      'twitterkeywords' => 'twitter api'
+      'twitterkeywords' => 'twitter api',
+      'maintainers' => array(
+        'twitter'
+      )
     )
   );
 

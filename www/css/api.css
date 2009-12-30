@@ -57,14 +57,21 @@
 
 .content .blocks .block .row {
   background-color: #E6E6E6;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EAEAEA), to(#EAEAEA));
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #E1E1E1), to(#E1E1E1));
   cursor: pointer;
 }
 
 .content .blocks .block .row:hover {
   background: #DDD;
-  background: -webkit-gradient(linear, left top, left bottom, from(#F0F0F0), color-stop(0.5, #F0F0F0), color-stop(0.5, #E6E6E6), to(#E6E6E6));
+  background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), color-stop(0.5, #EFEFEF), color-stop(0.5, #DCDCDC), to(#DCDCDC));
   cursor: pointer;
+}
+
+.content .blocks .block .row .icon {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 5px;
 }
 
 .content .blocks .block .row .details {
@@ -80,6 +87,15 @@
 .content .blocks .block .row .details .description {
   color: #666;
   text-shadow: -1px -1px 1px #FFF;
-  white-space: nowrap;
   overflow: hidden;
+}
+
+#twitter .row {
+  height: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.35, #F5F5F5), color-stop(0.35, #E1E1E1), to(#E1E1E1));
+}
+
+#twitter .row:hover {
+  height: 80px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), color-stop(0.35, #EFEFEF), color-stop(0.35, #DCDCDC), to(#DCDCDC));
 }

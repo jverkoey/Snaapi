@@ -1,5 +1,8 @@
 <?php
 
+define('TWITTER_CACHE', APPLICATION_PATH.'/data/cache/twitter');
+define('ONE_HOUR', 60*60);
+
 class ApiController extends SnaapiController {
 
   public function execute() {
@@ -17,6 +20,8 @@ class ApiController extends SnaapiController {
       if( $apicontext->isCallableAction($actionName) &&
           method_exists($this, $actionName) ) {
         $api = $this->apis[$apiId];
+
+        // Add the twitter feed
         if (isset($api['twitterkeywords'])) {
           if (!isset($api['feeds'])) {
             $api['feeds'] = array();
@@ -25,6 +30,7 @@ class ApiController extends SnaapiController {
             'http://search.twitter.com/search.atom?q='.$api['twitterkeywords'];
         }
 
+        // Add the stack overflow feeds
         if (isset($api['stackoverflowkeywords'])) {
           if (!isset($api['feeds'])) {
             $api['feeds'] = array();
@@ -32,6 +38,42 @@ class ApiController extends SnaapiController {
           $api['feeds']['StackOverflow Questions'] =
             'feed://stackoverflow.com/feeds/tag?sort=newest&tagnames='
             .str_replace(' ', '+', $api['stackoverflowkeywords']);
+        }
+
+        if (isset($api['maintainers'])) {
+          if (!file_exists(TWITTER_CACHE)) {
+            @mkdir(TWITTER_CACHE);
+          }
+
+          $users = array();
+          $refresh_users = array();
+
+          foreach ($api['maintainers'] as $username) {
+            if (!isset($twitter_users[$username])) {
+              $needs_refresh = true;
+              $cache_filename = TWITTER_CACHE.'/'.$username;
+              if (file_exists($cache_filename) &&
+                  filemtime($cache_filename) > time() - ONE_HOUR) {
+                $users[$username] =
+                  json_decode(file_get_contents($cache_filename), TRUE);
+                $needs_refresh = false;
+              }
+
+              if ($needs_refresh) {
+                $refresh_users []= $username;
+              }
+            }
+          }
+
+          foreach ($refresh_users as $username) {
+            $user_json_info = file_get_contents('http://twitter.com/users/show/'.$username.'.json');
+            $user_info = json_decode($user_json_info, TRUE);
+            
+            $cache_filename = TWITTER_CACHE.'/'.$username;
+            file_put_contents($cache_filename, $user_json_info);
+            $users[$username] = $user_info;
+          }
+          $this->view->users = $users;
         }
 
         $this->view->api = $api;
