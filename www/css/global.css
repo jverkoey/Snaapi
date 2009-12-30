@@ -47,6 +47,11 @@ strong {
 
 
 
+#filter {
+  border: 1px solid #999;
+  padding: 2px;
+}
+
 a {
   text-decoration: none;
 }

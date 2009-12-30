@@ -17,6 +17,7 @@
   width: 274px;
   height: 67px;
   cursor: pointer;
+  display: block;
 }
 
 .inlineblock {
@@ -36,17 +37,20 @@
 .block .details {
   margin-left: 67px;
   margin-top: 14px;
+  display: block;
 }
 
 .block .title {
   font-size: 1.3em;
   text-shadow: -1px -1px 1px #FFF;
   color: #000;
+  display: block;
 }
 
 .block .description {
   color: #666;
   text-shadow: -1px -1px 1px #FFF;
+  display: block;
 }
 
 .block .icon {
