@@ -5,7 +5,7 @@
 </div>
 
 <a href="/"><div class="tab leftsidetab">&lt; Back</div></a>
-<div class="tab rightsidetab">I'm dreaming of a more connected world.</div>
+<div class="tab rightsidetab">Dreaming of a more connected world.</div>
 <div class="clearfix"></div>
 
 <div class="content">
@@ -47,7 +47,7 @@
   <div class="block" id="twitter">
     <h1>People to follow</h1>
 <? foreach ($this->api['maintainers'] as $username) { ?>
-  <a href="<?= $url ?>">
+  <a href="http://twitter.com/<?= $username ?>">
     <div class="row">
       <div class="icon">
         <img src="<?= $this->users[$username]['profile_image_url'] ?>" width="48px" height="48px" />

@@ -40,6 +40,20 @@ class SnaapiController extends Keystone_Controller {
       'stackoverflowkeywords' => 'facebook facebook-api facebook-connect',
       'twitterkeywords' => 'facebook api'
     ),
+    'github' => array(
+      'name' => 'GitHub',
+      'description' => 'The GitHub API.',
+      'homepage' => 'http://develop.github.com/',
+      'roundedicon' => false,
+      'feeds' => array(
+        'GitHub Blog' => 'http://feeds.feedburner.com/github'
+      ),
+      'stackoverflowkeywords' => 'github',
+      'twitterkeywords' => 'github api',
+      'maintainers' => array(
+        'github'
+      )
+    ),
     'gmaps' => array(
       'name' => 'Google Maps',
       'description' => 'The Google Maps API.',
