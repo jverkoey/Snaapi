@@ -27,7 +27,10 @@
 </a>
 
 <div class="blocks">
-<? if (isset($this->api['feeds'])) { ?>
+
+<? $block_count = 0; ?>
+
+<? if (isset($this->api['feeds'])) { ++$block_count; ?>
   <div class="block">
     <h1>Feeds</h1>
 <? foreach ($this->api['feeds'] as $name => $url) { ?>
@@ -43,7 +46,23 @@
   </div>
 <? } ?>
 
-<? if (isset($this->api['maintainers'])) { ?>
+<? if (isset($this->api['articles'])) { ++$block_count; ?>
+  <div class="block">
+    <h1>Articles</h1>
+<? foreach ($this->api['articles'] as $name => $url) { ?>
+  <a href="<?= $url ?>">
+    <div class="row">
+      <div class="details">
+        <div class="title"><?= $name ?></div>
+        <div class="description"><?= $url ?></div>
+      </div>
+    </div>
+  </a>
+<? } ?>
+  </div>
+<? } ?>
+
+<? if (isset($this->api['maintainers'])) { ++$block_count; ?>
   <div class="block" id="twitter">
     <h1>People to follow</h1>
 <? foreach ($this->api['maintainers'] as $username) { ?>
@@ -63,8 +82,8 @@
   </div>
 <? } ?>
 
+<div class="clearfix"></div>
 
-  <div class="clearfix"></div>
 </div>
 
 </div> <!-- content -->

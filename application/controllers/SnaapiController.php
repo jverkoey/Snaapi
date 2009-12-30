@@ -3,6 +3,33 @@
 class SnaapiController extends Keystone_Controller {
 
   protected $apis = array(
+    'admob' => array(
+      'name' => 'AdMob',
+      'description' => 'AdMob\'s mobile, analytics and publishers API.',
+      'homepage' => 'http://developer.admob.com/wiki/Main_Page',
+      'roundedicon' => false,
+      'feeds' => array(
+        'AdMob Blog' => 'http://blog.admob.com/feed/'
+      ),
+      'twitterkeywords' => 'admob api',
+      'maintainers' => array(
+        'admob'
+      )
+    ),
+    'aws' => array(
+      'name' => 'Amazon Web Services',
+      'description' => 'Amazon\'s cloud services.',
+      'homepage' => 'http://aws.amazon.com/',
+      'roundedicon' => false,
+      'feeds' => array(
+        'Amazon Web Services Blog' => 'http://aws.typepad.com/'
+      ),
+      'stackoverflowkeywords' => 'amazon',
+      'twitterkeywords' => 'ec2 api',
+      'maintainers' => array(
+        'amazonaws'
+      )
+    ),
     'bestbuy' => array(
       'name' => 'Best Buy Remix',
       'description' => 'Best Buy\'s product catalog API.',
@@ -94,6 +121,10 @@ class SnaapiController extends Keystone_Controller {
       'maintainers' => array(
         'joehewitt',
         'featherless'
+      ),
+      'articles' => array(
+        'Three20 TTTableitem Tutorial' => 'http://mattvague.com/three20-tttableitem-tutorial',
+        'TTRemoteExamples' => 'http://github.com/klazuka/TTRemoteExamples'
       )
     ),
     'twitter' => array(
