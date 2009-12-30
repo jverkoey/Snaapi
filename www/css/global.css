@@ -20,8 +20,8 @@ body {
   clear: both;
   height: 55px;
   position: relative;
-  background-color: #CCC;
-  border-top: 10px dashed #333;
+  background-color: #999;
+  border-top: 10px solid #333;
   margin-top: 40px;
 }
 

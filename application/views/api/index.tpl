@@ -9,16 +9,22 @@
 <div class="clearfix"></div>
 
 <div class="content">
+
+<a href="<?= $this->api['homepage'] ?>">
 <div class="header">
   <div class="icon<?= $this->api['roundedicon'] ? ' rounded' : ''; ?>">
     <img src="/gfx/<?= $this->apiId ?>.png" width="57px" height="57px" />
   </div>
   <div class="details">
     <div class="title"><?= $this->api['name'] ?></div>
-    <div class="description"><?= $this->api['description'] ?></div>
+    <div class="description">
+      <?= $this->api['description'] ?><br/>
+      <?= $this->api['homepage'] ?>
+    </div>
   </div>
   <div class="clearfix"></div>
 </div>
+</a>
 
 <div class="blocks">
 <? if (isset($this->api['feeds'])) { ?>
