@@ -60,7 +60,6 @@ class ApiController extends SnaapiController {
       'content' => $this->view->api['description']
     ));
 
-    $this->view->addCssFile('/css/common.css');
     $this->view->addCssFile('/css/api.css');
     $this->view->addJsFootFile('http://www.google.com/jsapi?key='.GFEEDS_API);
     $this->view->apis = $this->apis;
