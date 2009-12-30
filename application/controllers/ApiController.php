@@ -29,6 +29,15 @@ class ApiController extends SnaapiController {
           $api['feeds']['Twitter search for "'.$api['twitterkeywords'].'"'] =
             'http://search.twitter.com/search.atom?q='.$api['twitterkeywords'];
         }
+        
+        if (isset($api['stackoverflowkeywords'])) {
+          if (!isset($api['feeds'])) {
+            $api['feeds'] = array();
+          }
+          $api['feeds']['StackOverflow Questions'] =
+            'feed://stackoverflow.com/feeds/tag?sort=newest&tagnames='
+            .str_replace(' ', '+', $api['stackoverflowkeywords']);
+        }
 
         $this->view->api = $api;
         $this->view->apiId = $apiId;
