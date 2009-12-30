@@ -4,6 +4,10 @@
   <a href="/"><span class="snaapi">sna<span class="rightside">api</span></span></a>
 </div>
 
+<a href="/"><div class="tab leftsidetab">&lt; Back</div></a>
+<div class="tab rightsidetab">I'm dreaming of a more connected world.</div>
+<div class="clearfix"></div>
+
 <div class="content">
 <div class="header">
   <div class="icon<?= $this->api['roundedicon'] ? ' rounded' : ''; ?>">

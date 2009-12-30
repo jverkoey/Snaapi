@@ -18,7 +18,6 @@ a {
 #page-header {
   text-align: center;
   padding-top: 10px;
-  padding-bottom: 10px;
   font-size: 5em;
 }
 
@@ -29,4 +28,28 @@ a {
 .fixedwidth {
   width: 900px;
   margin: 0 auto;
+}
+
+.tab {
+  background-color: #EEE;
+  padding: 5px;
+  border-bottom: 1px dashed #333;
+  text-shadow: -1px -1px 1px #FFF;
+}
+
+a .tab {
+  color: #999;
+}
+
+a:hover .tab {
+  color: #000;
+}
+
+.rightsidetab {
+  float: right;
+  color: #666;
+}
+
+.leftsidetab {
+  float: left;
 }

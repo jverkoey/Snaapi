@@ -4,6 +4,9 @@
   <span class="snaapi">sna<span class="rightside">api</span></span>
 </div>
 
+<div class="tab rightsidetab">I'm dreaming of a more connected world.</div>
+<div class="clearfix"></div>
+
 <div class="blocks">
 
 <? foreach ($this->apis as $id => $api) { ?>
