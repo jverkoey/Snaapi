@@ -1,0 +1,3 @@
+<?php
+
+define('GFEEDS_API', '');

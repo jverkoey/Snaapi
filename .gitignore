@@ -1,3 +1,4 @@
 library/
 .htaccess
 application/data/
+application/config/config.php
