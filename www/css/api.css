@@ -135,6 +135,7 @@
 }
 
 .drawer {
+  border-top: 5px dashed #333;
   display: none;
   padding: 5px;
   background-color: #EEE;

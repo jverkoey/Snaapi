@@ -1,5 +1,7 @@
 <?php
 
+include APPLICATION_PATH.'/views/SnaapiView.php';
+
 class ApiController extends SnaapiController {
 
   public function execute() {
@@ -11,7 +13,7 @@ class ApiController extends SnaapiController {
 
     if (isset($this->apis[$apiId])) {
       $apicontext = new Keystone_Context('/api');
-      $this->view = new Keystone_View($apicontext);
+      $this->view = new SnaapiView($apicontext);
 
       $actionName = $apicontext->getActionName();
       if( $apicontext->isCallableAction($actionName) &&

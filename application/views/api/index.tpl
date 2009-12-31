@@ -33,14 +33,7 @@
   <div class="block">
     <h1>Feeds</h1>
 <? foreach ($this->api['feeds'] as $name => $url) { ?>
-  <a href="<?= $url ?>">
-    <span class="row">
-      <span class="details">
-        <span class="title"><?= $name ?></span>
-        <span class="description"><?= $url ?></span>
-      </span>
-    </span>
-  </a>
+  <?= $this->generate_block($url, $name, $url) ?>
 <? } ?>
   </div>
 <? } ?>
@@ -49,14 +42,7 @@
   <div class="block">
     <h1>Articles</h1>
 <? foreach ($this->api['articles'] as $name => $url) { ?>
-  <a href="<?= $url ?>">
-    <span class="row">
-      <span class="details">
-        <span class="title"><?= $name ?></span>
-        <span class="description"><?= $url ?></span>
-      </span>
-    </span>
-  </a>
+  <?= $this->generate_block($url, $name, $url) ?>
 <? } ?>
   </div>
 <? } ?>
@@ -65,18 +51,11 @@
   <div class="block" id="twitter">
     <h1>People to follow</h1>
 <? foreach ($this->api['maintainers'] as $username) { ?>
-  <a href="http://twitter.com/<?= $username ?>">
-    <span class="row">
-      <span class="icon">
-        <img src="<?= $this->users[$username]['profile_image_url'] ?>" width="48px" height="48px" />
-      </span>
-      <span class="details">
-        <span class="title"><?= $username ?></span>
-        <span class="description"><?= $this->users[$username]['status']['text'] ?></span>
-      </span>
-      <span class="clearfix"></span>
-    </span>
-  </a>
+  <?= $this->generate_image_block(
+    'http://twitter.com/'.$username,
+    $username,
+    $this->users[$username]['status']['text'],
+    $this->users[$username]['profile_image_url'], 48, 48) ?>
 <? } ?>
   </div>
 <? } ?>
