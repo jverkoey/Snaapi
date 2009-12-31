@@ -1,5 +1,12 @@
 <?php
 
+defined('APPLICATION_ENV') ||
+  define('APPLICATION_ENV', getenv('APPLICATION_ENV'));
+
+if (APPLICATION_ENV == 'development') {
+  define('PAGE_EXECUTE_START', microtime());
+}
+
 defined('APPLICATION_PATH') ||
   define('APPLICATION_PATH', realpath(dirname(__FILE__) . '/../application'));
 
@@ -15,3 +22,8 @@ include 'Keystone/Keystone.php';
 
 $keystone = new Keystone();
 $keystone->execute();
+
+if (APPLICATION_ENV == 'development') {
+  $page_execute_time = (microtime() - PAGE_EXECUTE_START);
+  echo '<!-- Gen-time: '.$page_execute_time.' seconds -->';
+}
