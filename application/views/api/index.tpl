@@ -32,31 +32,31 @@
 <? if (isset($this->api['feeds'])) { ++$block_count; ?>
   <div class="block">
     <h1>Feeds</h1>
-<? foreach ($this->api['feeds'] as $name => $url) { ?>
-  <?= $this->generate_block($url, $name, $url) ?>
-<? } ?>
+<? foreach ($this->api['feeds'] as $name => $url) {
+  echo $this->generate_block($url, $name, $url);
+} ?>
   </div>
 <? } ?>
 
 <? if (isset($this->api['articles'])) { ++$block_count; ?>
   <div class="block">
     <h1>Articles</h1>
-<? foreach ($this->api['articles'] as $name => $url) { ?>
-  <?= $this->generate_block($url, $name, $url) ?>
-<? } ?>
+<? foreach ($this->api['articles'] as $name => $url) {
+  echo $this->generate_block($url, $name, $url);
+} ?>
   </div>
 <? } ?>
 
 <? if (isset($this->api['maintainers'])) { ++$block_count; ?>
   <div class="block" id="twitter">
     <h1>People to follow</h1>
-<? foreach ($this->api['maintainers'] as $username) { ?>
-  <?= $this->generate_image_block(
+<? foreach ($this->api['maintainers'] as $username) {
+  echo $this->generate_image_block(
     'http://twitter.com/'.$username,
     $username,
     $this->users[$username]['status']['text'],
-    $this->users[$username]['profile_image_url'], 48, 48) ?>
-<? } ?>
+    $this->users[$username]['profile_image_url'], 48, 48);
+} ?>
   </div>
 <? } ?>
 
