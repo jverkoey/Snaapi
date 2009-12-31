@@ -100,3 +100,42 @@
   height: 80px;
   background: -webkit-gradient(linear, left top, left bottom, from(#EFEFEF), color-stop(0.35, #EFEFEF), color-stop(0.35, #DCDCDC), to(#DCDCDC));
 }
+
+/**
+ * The drawer styling.
+ * This guy remains closed until the user hovers their mouse over the handle.
+ */
+.drawer-handle {
+  background-color: #444;
+}
+
+.drawer-handle .text {
+  padding: 5px;
+  color: #999;
+  font-size: 1.3em;
+  text-shadow: 1px 1px 1px #000;
+  text-align: center;
+}
+
+.drawer-handle:hover .drawer {
+  display: block;
+}
+
+.drawer-handle:hover .text {
+  display: none;
+}
+
+.drawer {
+  display: none;
+  padding: 5px;
+  background-color: #EEE;
+}
+
+.drawer h1 {
+  font-size: 2em;
+  color: #666;
+  text-shadow: -1px -1px 0px #FFF;
+  text-align: center;
+  margin-bottom: 10px;
+}
+

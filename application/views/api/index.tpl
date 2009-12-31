@@ -83,8 +83,17 @@
 
 <div class="clearfix"></div>
 
-</div>
+</div> <!-- blocks -->
 
 </div> <!-- content -->
+
+<div class="drawer-handle">
+<div class="text">Yup, this is the handle for a drawer. Try opening it.</div>
+
+<div class="drawer">
+  <h1>Contribute</h1>
+</div>
+
+</div> <!-- drawer-handle -->
 
 </div> <!-- fixedwidth -->
