@@ -10,19 +10,19 @@
 <div class="content">
 
 <a href="<?= $this->api['homepage'] ?>">
-<div class="header">
-  <div class="icon<?= $this->api['roundedicon'] ? ' rounded' : ''; ?>">
+<span class="header">
+  <span class="icon<?= $this->api['roundedicon'] ? ' rounded' : ''; ?>">
     <img src="/gfx/<?= $this->apiId ?>.png" width="57px" height="57px" />
-  </div>
-  <div class="details">
-    <div class="title"><?= $this->api['name'] ?></div>
-    <div class="description">
+  </span>
+  <span class="details">
+    <span class="title"><?= $this->api['name'] ?></span>
+    <span class="description">
       <?= $this->api['description'] ?><br/>
       <?= $this->api['homepage'] ?>
-    </div>
-  </div>
-  <div class="clearfix"></div>
-</div>
+    </span>
+  </span>
+  <span class="clearfix"></span>
+</span>
 </a>
 
 <div class="blocks">
@@ -34,12 +34,12 @@
     <h1>Feeds</h1>
 <? foreach ($this->api['feeds'] as $name => $url) { ?>
   <a href="<?= $url ?>">
-    <div class="row">
-      <div class="details">
-        <div class="title"><?= $name ?></div>
-        <div class="description"><?= $url ?></div>
-      </div>
-    </div>
+    <span class="row">
+      <span class="details">
+        <span class="title"><?= $name ?></span>
+        <span class="description"><?= $url ?></span>
+      </span>
+    </span>
   </a>
 <? } ?>
   </div>
@@ -50,12 +50,12 @@
     <h1>Articles</h1>
 <? foreach ($this->api['articles'] as $name => $url) { ?>
   <a href="<?= $url ?>">
-    <div class="row">
-      <div class="details">
-        <div class="title"><?= $name ?></div>
-        <div class="description"><?= $url ?></div>
-      </div>
-    </div>
+    <span class="row">
+      <span class="details">
+        <span class="title"><?= $name ?></span>
+        <span class="description"><?= $url ?></span>
+      </span>
+    </span>
   </a>
 <? } ?>
   </div>
@@ -66,16 +66,16 @@
     <h1>People to follow</h1>
 <? foreach ($this->api['maintainers'] as $username) { ?>
   <a href="http://twitter.com/<?= $username ?>">
-    <div class="row">
-      <div class="icon">
+    <span class="row">
+      <span class="icon">
         <img src="<?= $this->users[$username]['profile_image_url'] ?>" width="48px" height="48px" />
-      </div>
-      <div class="details">
-        <div class="title"><?= $username ?></div>
-        <div class="description"><?= $this->users[$username]['status']['text'] ?></div>
-      </div>
-      <div class="clearfix"></div>
-    </div>
+      </span>
+      <span class="details">
+        <span class="title"><?= $username ?></span>
+        <span class="description"><?= $this->users[$username]['status']['text'] ?></span>
+      </span>
+      <span class="clearfix"></span>
+    </span>
   </a>
 <? } ?>
   </div>

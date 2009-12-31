@@ -9,6 +9,7 @@
   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #EAEAEA), to(#EAEAEA));
   border-bottom: 10px dashed #333;
   padding: 10px;
+  display: block;
 }
 
 .content .header .icon {
@@ -24,18 +25,21 @@
 
 .content .header .details {
   margin-left: 67px;
-  margin-top: 12px;
+  margin-top: 14px;
+  display: block;
 }
 
 .content .header .title {
   font-size: 1.3em;
   text-shadow: -1px -1px 1px #FFF;
   color: #000;
+  display: block;
 }
 
 .content .header .description {
   color: #666;
   text-shadow: -1px -1px 1px #FFF;
+  display: block;
 }
 
 .content .blocks {
@@ -46,6 +50,7 @@
   padding: 10px;
   float: left;
   width: 430px;
+  display: block;
 }
 
 .content .blocks .block h1 {
@@ -60,6 +65,7 @@
   background-color: #E6E6E6;
   background: -webkit-gradient(linear, left top, left bottom, from(#F5F5F5), color-stop(0.5, #F5F5F5), color-stop(0.5, #E1E1E1), to(#E1E1E1));
   cursor: pointer;
+  display: block;
 }
 
 .content .blocks .block .row:hover {
@@ -77,18 +83,21 @@
 
 .content .blocks .block .row .details {
   padding: 10px;
+  display: block;
 }
 
 .content .blocks .block .row .details .title {
   font-size: 1.3em;
   text-shadow: -1px -1px 1px #FFF;
   color: #000;
+  display: block;
 }
 
 .content .blocks .block .row .details .description {
   color: #666;
   text-shadow: -1px -1px 1px #FFF;
   overflow: hidden;
+  display: block;
 }
 
 #twitter .row {
